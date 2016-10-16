@@ -10,16 +10,19 @@ app.controller('appCtrl', function () {
 app.config(function($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl : '',
+            templateUrl : '../resources/partials/home.html',
             controller  : 'appCtrl'
         })
         .when('/loading1', {
             templateUrl : '../resources/partials/loading1.html',
-            controller  : 'appCtrl'
+            controller  : 'loading1Controller'
         })
         .when('/loading2', {
             templateUrl : '../resources/partials/loading2.html',
-            controller  : 'appCtrl'
+            controller  : 'loading2Controller'
+        })
+        .when('/success', {
+            templateUrl: '../resources/partials/success.html'
         })
         .otherwise({
              redirectTo: '/'

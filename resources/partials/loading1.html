@@ -1,3 +1,11 @@
-<h2 class="md-title">Loading</h2>
+<div flex-xs flex-gt-xs="200" layout="column" layout-align="center">
 
-  <md-progress-linear md-mode="determinate" value="{{vm.loading_time}}"></md-progress-linear>
+    <md-content ng-controller="loading1Controller as l1" layout="column">
+        <h2 class="md-title">Loading</h2>
+
+          <md-progress-linear md-mode="determinate" value="{{l1.counter}}" class="standard-bar"></md-progress-linear>
+    </md-content>
+    
+</div>
+
+<md-button class="md-primary md-raised" href="/#/">Back</md-button>
