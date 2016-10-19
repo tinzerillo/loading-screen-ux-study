@@ -192,7 +192,7 @@ function pause(o) {
 			$('#helpScreen').fadeOut(300, "linear");
 		}
 
-		$("#pauseBtn").attr("src", "./images/btn_pause.svg");
+		$("#pauseBtn").attr("src", "./../game/images/btn_pause.svg");
 		$('.helpText').fadeOut(300, 'linear');
 		$('#overlay').fadeOut(300, 'linear');
 		hideText();
