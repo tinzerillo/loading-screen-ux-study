@@ -5,5 +5,5 @@ app.controller('loading2Controller', function ($interval, $timeout, $location) {
         $location.path('/done');
     }
 
-    $timeout( function(){ vm.completeLoading(); }, 6000);
+    $timeout( function(){ vm.completeLoading(); }, 60000);
 });
