@@ -7,7 +7,7 @@ app.controller('loading1Controller', function ($interval, $timeout, $location, $
         $location.path('/success');
     }
 
-    $timeout( function(){ vm.completeLoading(); }, 60000);
+    var timer = $timeout( function(){ vm.completeLoading(); }, 60000);
     
     vm.incrementLoadingBar = function() {
         vm.counter = vm.counter + .84;
@@ -18,6 +18,9 @@ app.controller('loading1Controller', function ($interval, $timeout, $location, $
 	$scope.$on("$destroy", function() {
         if (loadingBarCounter) {
             $interval.cancel(loadingBarCounter);
+        }
+        if (timer) {
+            $timeout.cancel(timer);
         }
     });
 });

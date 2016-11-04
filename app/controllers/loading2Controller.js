@@ -5,5 +5,11 @@ app.controller('loading2Controller', function ($interval, $timeout, $location) {
         $location.path('/done');
     }
 
-    $timeout( function(){ vm.completeLoading(); }, 60000);
+    var timer = $timeout( function(){ vm.completeLoading(); }, 60000);
+    
+    $scope.$on("$destroy", function() {
+        if (timer) {
+            $timeout.cancel(timer);
+        }
+    });
 });
